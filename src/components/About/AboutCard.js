@@ -26,7 +26,7 @@ function AboutCard() {
             platform that combined my three favorite things: technology,
             coding, and finance with the goal of running my own capital as a
             part-time quantitative investor. I'm a futurist by default:
-            always curious (like where are all the aliens??), always building something, fairly convinced the
+            always curious (like seriously where are all the aliens??), always building something, fairly convinced the
             next decade is going to be awesome
             <br />
             <br />
