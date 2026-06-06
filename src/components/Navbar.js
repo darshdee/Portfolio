@@ -3,17 +3,22 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { CgGitFork, CgFileDocument } from "react-icons/cg";
-import {
-  AiFillStar,
-  AiOutlineHome,
-  AiOutlineUser,
-} from "react-icons/ai";
+import { AiFillStar, AiOutlineUser, AiOutlineFundProjectionScreen } from "react-icons/ai";
+
+function scrollToSection(sectionId) {
+  const el = document.getElementById(sectionId);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+}
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -24,6 +29,15 @@ function NavBar() {
   }
 
   window.addEventListener("scroll", scrollHandler);
+
+  const handleSectionNav = (sectionId) => {
+    updateExpanded(false);
+    if (location.pathname !== "/") {
+      navigate(`/#${sectionId}`);
+    } else {
+      scrollToSection(sectionId);
+    }
+  };
 
   return (
     <Navbar
@@ -47,20 +61,29 @@ function NavBar() {
           <span></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto" defaultActiveKey="#home">
+          <Nav className="ms-auto" defaultActiveKey="#about">
             <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+              <Nav.Link
+                href="#about"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSectionNav("about");
+                }}
+              >
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> About me
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/about"
+                to="/project"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+                <AiOutlineFundProjectionScreen
+                  style={{ marginBottom: "2px" }}
+                />{" "}
+                Projects
               </Nav.Link>
             </Nav.Item>
 
@@ -76,8 +99,9 @@ function NavBar() {
 
             <Nav.Item className="fork-btn">
               <Button
-                href=""
+                href="https://github.com/darshdee/Portfolio"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="fork-btn-inner"
               >
                 <CgGitFork style={{ fontSize: "1.2em" }} />{" "}

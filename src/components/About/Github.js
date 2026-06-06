@@ -5,6 +5,7 @@ import { Row } from "react-bootstrap";
 function Github() {
   return (
     <Row
+      id="github"
       style={{
         justifyContent: "center",
         paddingBottom: "10px",
@@ -14,7 +15,7 @@ function Github() {
         Days I <strong className="purple">Code</strong>
       </h1>
       <GitHubCalendar
-        username="soumyajit4419"
+        username="darshdee"
         blockSize={30}
         blockMargin={10}
         color="#8b5cf6"
