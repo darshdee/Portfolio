@@ -36,7 +36,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project" element={<Projects />} />
-          <Route path="/about" element={<Navigate to="/#about" replace />} />
+          <Route path="/about" element={<Navigate to="/" replace />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>

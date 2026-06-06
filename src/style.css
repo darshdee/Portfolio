@@ -627,6 +627,43 @@ button:focus {
   color: var(--text) !important;
 }
 
+/* Tighter spacing when about content follows the homepage hero */
+.about-section-home {
+  padding-top: 40px !important;
+}
+
+.about-intro-row {
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px 20px;
+}
+
+.about-intro-text {
+  padding-top: 0;
+  padding-bottom: 40px;
+}
+
+.about-intro-heading {
+  font-size: 2.1em;
+  padding-bottom: 20px;
+}
+
+.about-section-home .about-img {
+  padding-top: 0;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .about-section-home {
+    padding-top: 30px !important;
+  }
+
+  .about-section-home .about-img {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+}
+
 .tech-icons {
   display: flex !important;
   align-self: center !important;

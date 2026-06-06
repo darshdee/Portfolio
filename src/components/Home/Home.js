@@ -3,24 +3,19 @@ import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/home-main.svg";
 import laptopImg from "../../Assets/about.png";
 import Particle from "../Particle";
-import Home2 from "./Home2";
 import Type from "./Type";
 import Aboutcard from "../About/AboutCard";
 import Techstack from "../About/Techstack";
 import Toolstack from "../About/Toolstack";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
-// Social profile URLs — update LinkedIn / Twitter / Instagram when ready
+// Social profile URLs
 const SOCIAL_LINKS = {
   github: "https://github.com/darshdee",
   linkedin: "https://www.linkedin.com/in/darshild",
-  twitter: "https://twitter.com/",
-  instagram: "https://www.instagram.com/",
 };
 
 function Home() {
@@ -61,34 +56,17 @@ function Home() {
         </Container>
       </Container>
 
-      {/* Intro blurb */}
-      <Home2 />
-
-      {/* About card, skills, tools, GitHub graph */}
-      <Container fluid className="about-section">
+      {/* Bio card, skills, tools */}
+      <Container fluid className="about-section about-section-home">
         <Container>
-          <Row
-            id="about"
-            style={{ justifyContent: "center", padding: "10px" }}
-          >
-            <Col
-              md={7}
-              style={{
-                justifyContent: "center",
-                paddingTop: "30px",
-                paddingBottom: "50px",
-              }}
-            >
-              <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-                Know Who <strong className="purple">I'M</strong>
+          <Row id="about" className="about-intro-row">
+            <Col md={7} className="about-intro-text">
+              <h1 className="about-intro-heading">
+                Just a little bit about <strong className="purple">me</strong>
               </h1>
               <Aboutcard />
             </Col>
-            <Col
-              md={5}
-              style={{ paddingTop: "120px", paddingBottom: "50px" }}
-              className="about-img"
-            >
+            <Col md={5} className="about-img">
               <img src={laptopImg} alt="about" className="img-fluid" />
             </Col>
           </Row>
@@ -126,32 +104,12 @@ function Home() {
               </li>
               <li className="social-icons">
                 <a
-                  href={SOCIAL_LINKS.twitter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
                   href={SOCIAL_LINKS.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="icon-colour home-social-icons"
                 >
                   <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href={SOCIAL_LINKS.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillInstagram />
                 </a>
               </li>
             </ul>

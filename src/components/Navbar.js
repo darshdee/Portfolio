@@ -7,13 +7,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { CgGitFork, CgFileDocument } from "react-icons/cg";
 import { AiFillStar, AiOutlineUser, AiOutlineFundProjectionScreen } from "react-icons/ai";
 
-function scrollToSection(sectionId) {
-  const el = document.getElementById(sectionId);
-  if (el) {
-    el.scrollIntoView({ behavior: "smooth" });
-  }
-}
-
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
@@ -30,12 +23,12 @@ function NavBar() {
 
   window.addEventListener("scroll", scrollHandler);
 
-  const handleSectionNav = (sectionId) => {
+  const handleAboutNav = () => {
     updateExpanded(false);
     if (location.pathname !== "/") {
-      navigate(`/#${sectionId}`);
+      navigate("/");
     } else {
-      scrollToSection(sectionId);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
@@ -61,14 +54,12 @@ function NavBar() {
           <span></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto" defaultActiveKey="#about">
+          <Nav className="ms-auto" defaultActiveKey="/">
             <Nav.Item>
               <Nav.Link
-                href="#about"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleSectionNav("about");
-                }}
+                as={Link}
+                to="/"
+                onClick={handleAboutNav}
               >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About me
               </Nav.Link>
