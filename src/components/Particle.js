@@ -5,45 +5,69 @@ function Particle() {
   return (
     <Particles
       id="tsparticles"
+      style={{ pointerEvents: "none" }}
       params={{
+        background: {
+          color: {
+            value: "transparent",
+          },
+        },
+        fpsLimit: 60,
         particles: {
           number: {
             value: 160,
             density: {
               enable: true,
-              value_area: 1500,
+              value_area: 1400,
+            },
+          },
+          color: {
+            value: ["#8b5cf6", "#a78bfa", "#7c3aed", "#c4b5fd"],
+          },
+          shape: {
+            type: "circle",
+          },
+          opacity: {
+            value: 0.65,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 0.35,
+              opacity_min: 0.2,
+              sync: false,
+            },
+          },
+          size: {
+            value: 2.8,
+            random: true,
+            anim: {
+              enable: false,
             },
           },
           line_linked: {
             enable: false,
-            opacity: 0.03,
+            color: "#8b5cf6",
           },
           move: {
-            direction: "right",
-            speed: 0.05,
-          },
-          size: {
-            value: 1,
-          },
-          opacity: {
-            anim: {
-              enable: true,
-              speed: 1,
-              opacity_min: 0.05,
-            },
+            enable: true,
+            speed: 0.35,
+            random: true,
+            direction: "none",
+            straight: false,
+            out_mode: "out",
+            bounce: false,
           },
         },
         interactivity: {
+          detect_on: "canvas",
           events: {
+            onhover: {
+              enable: false,
+            },
             onclick: {
-              enable: true,
-              mode: "push",
+              enable: false,
             },
-          },
-          modes: {
-            push: {
-              particles_nb: 1,
-            },
+            resize: true,
           },
         },
         retina_detect: true,
