@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from "../../Assets/home-main.svg";
-import laptopImg from "../../Assets/about.png";
+import profilePhoto from "../../Assets/darshildesai_pp.jpg";
+import setupBro from "../../Assets/TechIcons/Setup-bro.svg";
 import Particle from "../Particle";
 import Type from "./Type";
 import Aboutcard from "../About/AboutCard";
@@ -44,12 +44,11 @@ function Home() {
               </div>
             </Col>
 
-            <Col md={5} style={{ paddingBottom: 20 }}>
+            <Col md={5} className="home-hero-img">
               <img
-                src={homeLogo}
-                alt="home pic"
-                className="img-fluid"
-                style={{ maxHeight: "450px" }}
+                src={profilePhoto}
+                alt="Darshil Desai"
+                className="profile-photo profile-photo-hero"
               />
             </Col>
           </Row>
@@ -67,7 +66,7 @@ function Home() {
               <Aboutcard />
             </Col>
             <Col md={5} className="about-img">
-              <img src={laptopImg} alt="about" className="img-fluid" />
+              <img src={setupBro} alt="about" className="img-fluid about-section-img" />
             </Col>
           </Row>
 

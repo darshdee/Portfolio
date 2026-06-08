@@ -292,6 +292,31 @@ button:focus {
   text-align: left;
 }
 
+.home-hero-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.profile-photo-hero {
+  width: 360px;
+  height: 360px;
+}
+
+.about-section-img {
+  max-height: 520px;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .profile-photo-hero {
+    width: 280px;
+    height: 280px;
+    margin-top: 30px;
+  }
+}
+
 .heading {
   font-size: 2.4em !important;
   padding-left: 50px !important;
@@ -745,6 +770,28 @@ button:focus {
 .about-section-home .about-img {
   padding-top: 0;
   padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Circular profile photo — object-position keeps face centered in crop */
+.profile-photo {
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 28%;
+  border: 5px solid var(--card-bg);
+  box-shadow: var(--card-shadow-hover);
+}
+
+@media (max-width: 767px) {
+  .profile-photo {
+    width: 260px;
+    height: 260px;
+    object-position: center 25%;
+  }
 }
 
 @media (max-width: 767px) {
