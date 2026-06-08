@@ -42,7 +42,7 @@ function AboutCard() {
               Guide, make of that what you will)
             </li>
             <li className="about-activity">
-              🎬 Deep in a movie, good or gloriously bad
+              🎬 Watching movies (Favorite movie -> Interstellar)
             </li>
             <li className="about-activity">
             👩‍❤️‍👨 Spending time with my loved ones of course
