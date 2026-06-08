@@ -35,6 +35,6 @@ Swap placeholder content in `AboutCard.js`, add real projects in `Projects.js`, 
 
 ## Credit
 
-Forked from [Soumyajit Behera's portfolio template](https://github.com/soumyajit4419/Portfolio). I reworked the content, theme, and layout but the original design is his — link back if you fork this repo.
+Forked from [Soumyajit Behera's portfolio template](https://github.com/soumyajit4419/Portfolio). I reworked the content, theme, and layout but the original design is his: link back if you fork this repo if you can please!
 
-Thanks!
+Thanks very much
