@@ -32,6 +32,7 @@ function Projects() {
             description="Built an options screening dashboard for finding high-probability bull put spreads and cash-secured puts: ingested live options-chain data, modeled risk/reward metrics, stored results in Supabase, and shipped a clean Next.js interface for filtering trades by budget, probability, and loss-to-profit profile."
             techStack={["Python", "Pandas", "Supabase", "SQL", "Next.js", "TypeScript"]}
             demoLink="https://premia-eight.vercel.app/"
+            ghLink="https://github.com/darshdee/premia"            
           />
           <ProjectCard
             emoji="🔧"
