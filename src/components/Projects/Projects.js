@@ -17,6 +17,7 @@ function Projects() {
 
         {/* 2-col desktop, 1-col mobile */}
         <div className="projects-grid">
+  
           <ProjectCard
             emoji="📊"
             title="Capital Analytics"
@@ -24,6 +25,13 @@ function Projects() {
             techStack={["Next.js", "Python", "Pandas", "SQL", "Git"]}
             // ghLink="https://github.com/yourhandle/capital-analytics"
             demoLink="https://capital-analytics.vercel.app/"
+          />
+           <ProjectCard
+            emoji="📈"
+            title="Premia"
+            description="Built an options screening dashboard for finding high-probability bull put spreads and cash-secured puts: ingested live options-chain data, modeled risk/reward metrics, stored results in Supabase, and shipped a clean Next.js interface for filtering trades by budget, probability, and loss-to-profit profile."
+            techStack={["Python", "Pandas", "Supabase", "SQL", "Next.js", "TypeScript"]}
+            demoLink="https://premia-eight.vercel.app/"
           />
           <ProjectCard
             emoji="🔧"
